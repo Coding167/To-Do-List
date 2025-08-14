@@ -7,4 +7,4 @@ A simple C++ program to add, view, and manage tasks.
 - View all tasks
 - Mark tasks as complete
 - Delete tasks
-- Save tasks to a file (optional)
+- Save tasks to a file
