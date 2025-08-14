@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits> // for numeric_limits
+#include "file.h"
 using namespace std;
 
 int main() {
