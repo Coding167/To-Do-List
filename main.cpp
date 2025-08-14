@@ -54,7 +54,16 @@ int main() {
         if (choice == 1) {
             cout<<"Add new task Feature.\n";
         }else if (choice == 2) {
-            cout<<"View all Tasks Feature.\n";
+            vector<string> tasks = file.read();
+            tasks.erase(tasks.begin());
+            if (tasks.empty()) {
+                cout<<"You haven't any task.\n";
+            }else {
+                for (int i = 0 ; i < tasks.size() ; i++) {
+                    vector<string> parts = split(tasks.at(i),',');
+                    cout<<i+1<<". "<<parts.at(0)<<" - "<<(parts.at(1) == "1" ? "Complated" : "Not Complated")<<endl;
+                }
+            }
         }else if (choice == 3) {
             cout<<"Mark task as Complate Feature.\n";
         }else if (choice == 4) {
